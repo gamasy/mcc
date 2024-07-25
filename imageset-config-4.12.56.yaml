@@ -1,0 +1,11 @@
+apiVersion: mirror.openshift.io/v1alpha2
+kind: ImageSetConfiguration
+storageConfig:
+  local:
+    path: /upgrade/oke/ocp-release-images/ocp4.12.56/
+mirror:
+  platform:
+    channels:
+      - name: stable-4.12
+        minVersion: 4.12.56
+        maxVersion: 4.12.56
