@@ -1,0 +1,30 @@
+apiVersion: mirror.openshift.io/v1alpha2
+kind: ImageSetConfiguration
+storageConfig:
+  local:
+    path: /upgrade/oke/operators/operatorv413-local-storage
+mirror:
+  operators:
+      - catalog: registry.redhat.io/redhat/redhat-operator-index:v4.13
+        packages:
+          - name: local-storage-operator
+            channels:
+              - name: stable
+                minVersion: '4.13.0-202308221627'
+                maxVersion: '4.13.0-202308221627'
+
+
+apiVersion: mirror.openshift.io/v1alpha2
+kind: ImageSetConfiguration
+storageConfig:
+  local:
+    path: /upgrade/oke/operators/operatorv414-local-storage
+mirror:
+  operators:
+      - catalog: registry.redhat.io/redhat/redhat-operator-index:v4.14
+        packages:
+          - name: local-storage-operator
+            channels:
+              - name: stable
+                minVersion: '4.14.0-202402221640'
+                maxVersion: '4.14.0-202402221640'
